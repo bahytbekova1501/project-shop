@@ -1,0 +1,17 @@
+:root {
+  /* font family */
+  --main-family: "Montserrat", sans-serif;
+
+  /* font size */
+  --main-size: 18px;
+  --nav-size: 16px;
+  --section-title-size: 64px;
+  --service-title-size: 40px;
+
+  /* colors */
+  --main-color: #343434;
+  --secondary-color: #e9dcbe;
+  --primary-color: #8e8b82;
+
+  --container-width: 1200px;
+}
