@@ -1,89 +1,87 @@
 //? api для запросов
-const API2 = "http://localhost:8000/productsWoman";
+const API = "http://localhost:8000/productsWoman";
 
-const list2 = document.querySelector("#products-list-2");
+const list = document.querySelector("#products-list-2");
 //?форма с inputами для ввода данных
-const addForm2 = document.querySelector("#add-form-2");
-const titleInp2 = document.querySelector("#title-2");
-const descriptionInp2 = document.querySelector("#description-2");
-const priceInp2 = document.querySelector("#price-2");
-const imageInp2 = document.querySelector("#image-2");
+const addForm = document.querySelector("#add-form-2");
+const titleInp = document.querySelector("#title-2");
+const descriptionInp = document.querySelector("#description-2");
+const priceInp = document.querySelector("#price-2");
+const imageInp = document.querySelector("#image-2");
 
 //? вытаскивам инпуты и кнопка из модалки
-const editTitleInp2 = document.querySelector("#edit-title-2");
-const editPriceInp2 = document.querySelector("#edit-price-2");
-const editDescriptionInp2 = document.querySelector("#edit-descr-2");
-const editImageInp2 = document.querySelector("#edit-image-2");
-const editSaveBtn2 = document.querySelector("#btn-save-edit-2");
+const editTitleInp = document.querySelector("#edit-title");
+const editPriceInp = document.querySelector("#edit-price");
+const editDescriptionInp = document.querySelector("#edit-descr");
+const editImageInp = document.querySelector("#edit-image");
+const editSaveBtn = document.querySelector("#btn-save-edit");
 //? то где отображаем кнокпи для пагинации
-const paginationList2 = document.querySelector(".pagination-list");
-const prev2 = document.querySelector(".prev");
-const next2 = document.querySelector(".next");
+const paginationList = document.querySelector(".pagination-list");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
 
 // //? input для поиска
-// const searchInp2 = document.querySelector("#search");
+const searchInp = document.querySelector("#search");
 // //? переменная по которой делаем запрос
-// let searchVal = "";
+let searchVal = "";
 
 // //? максимальное количество продуктов на одной странице
-// const limit = 6;
+const limit = 6;
 
 // //? текущая страница
-// let currentPage = 1;
+let currentPage = 1;
 
 // //? маскимальное / общее количество страниц
-// let pageTotalCount = 1;
+let pageTotalCount = 1;
 
 // ?первоначальное отображенеие данных
-getProducts2();
+getProducts();
 //? вместо изначального кода нужен этот
 //? стягиваем данные с сервера
-async function getProducts2() {
-  const res2 = await fetch(
-    //`${
-    API2 //}?title_like=${searchVal}&_limit=${limit}&_page=${currentPage}`
+async function getProducts() {
+  const res = await fetch(
+    `${API}?&_title=${searchVal}&_limit=${limit}&_page=${currentPage}`
   );
-  // const count = res2.headers.get("x-total-count");
-  // pageTotalCount = Math.ceil(count / limit);
-  const data2 = await res2.json();
+  const count = res.headers.get("x-total-count");
+  pageTotalCount = Math.ceil(count / limit);
+  const data = await res.json();
   //? расшифровка данных
   //? отображаем актуальные данные
-  render2(data2);
+  render(data);
 }
-async function addProduct2(product2) {
-  console.log(product2);
-  await fetch(API2, {
+async function addProduct(product) {
+  await fetch(API, {
     method: "POST",
-    body: JSON.stringify(product2),
+    body: JSON.stringify(product),
     headers: {
       "Content-Type": "application/json",
     },
   });
   //? стягиваем и отображаем актуальные данные
-  getProducts2();
+  getProducts();
 }
 
-async function deleteProduct2(id2) {
+async function deleteProduct(id) {
   //?await для того чтобы getProducts(); подождала пока данные добавяться , потому что fetch асинхронный
-  await fetch(`${API2}/${id2}`, {
+  await fetch(`${API}/${id}`, {
     method: "DELETE",
   });
   //?  стягиваем и отображаем актуальные данные
-  getProducts2();
+  getProducts();
 }
 
 //? функция для получения одного продукта
-async function getOneProduct2(id2) {
-  const res2 = await fetch(`${API2}/${id2}`);
-  const data2 = await res2.json(); // ? расшифровка данных
+async function getOneProduct(id) {
+  const res = await fetch(`${API}/${id}`);
+  const data = await res.json(); // ? расшифровка данных
   //?  возвращаем продукт с db.json
-  return data2;
+  return data;
 }
 
 //? функция что бы изменить данные
-async function editProduct2(id2, editedProduct) {
+async function editProduct(id, editedProduct) {
   //?await для того чтобы getProducts(); подождала пока данные добавяться , потому что fetch асинхронный
-  await fetch(`${API2}/${id2}`, {
+  await fetch(`${API}/${id}`, {
     method: "PATCH",
     body: JSON.stringify(editedProduct),
     headers: {
@@ -91,121 +89,121 @@ async function editProduct2(id2, editedProduct) {
     },
   });
   //?  стягиваем и отображаем актуальные данные
-  getProducts2();
+  getProducts();
 }
 //? отображаем на странице
-function render2(arr) {
-  list2.innerHTML = "";
+function render(arr) {
+  list.innerHTML = "";
   arr.forEach((item) => {
-    list2.innerHTML += `
+    list.innerHTML += `
     <div class="card m-5" style="width: 18rem" >
     <img
-    src = "${item.image2}"
+    src = "${item.image}"
     class "card-img-top"
     alt = "..."
     />
     <div class="card-body">
-      <h5 class="card-title">${item.title2}</h5>
-      <p class="card-text">${item.description2}</p>
-      <p class="card-text">${item.price2}</p>
-      <button id2 = "${item.id2}" class="btn btn-secondary btn-delete-2 ">удалить</button>
-      <button data-bs-toggle='modal' data-bs-target='#exampleModal' id2 = "${item.id2}" class="btn btn-dark btn-edit-2">изменить</button>
+      <h5 class="card-title">${item.title}</h5>
+      <p class="card-text">${item.description}</p>
+      <p class="card-text">${item.price}</p>
+      <button id = "${item.id}" class="btn btn-secondary delete-button ">удалить</button>
+      <button data-bs-toggle='modal' data-bs-target='#exampleModal' id = "${item.id}" class="btn btn-dark btn-edit">изменить</button>
      </div>
   </div>
         `;
   });
   //? добавляем эту функцию
-  // renderPagination2();
+  renderPagination();
 }
 
 // //? функция для отображения кнопок для пагинации
-// function renderPagination2() {
-//   paginationList2.innerHTML = "";
-//   for (let i = 1; i <= pageTotalCount; i++) {
-//     paginationList2.innerHTML += `
-//       <li class="page-item ${currentPage == i ? "active" : ""}">
-//       <a class="page-link page_number text-black" href="#">${i}</a>
-//       </li>
-//       `;
-//   }
-//   //? проверка для того чтоб кнопка превьюс была не активной на первой странице
-//   if (currentPage == 1) {
-//     prev2.classList.add("disabled");
-//   } else {
-//     prev2.classList.remove("disabled");
-//   }
+function renderPagination() {
+  paginationList.innerHTML = "";
+  for (let i = 1; i <= pageTotalCount; i++) {
+    paginationList.innerHTML += `
+      <li class="page-item ${currentPage == i ? "active" : ""}">
+      <a class="page-link page_number text-black" href="#">${i}</a>
+      </li>
+      `;
+  }
+  //   //? проверка для того чтоб кнопка превьюс была не активной на первой странице
+  if (currentPage == 1) {
+    prev.classList.add("disabled");
+  } else {
+    prev.classList.remove("disabled");
+  }
 
-//   //? проверка для того чтоб кнопка некст была не активной на последней странице
-//   if (currentPage == pageTotalCount) {
-//     next2.classList.add("disabled");
-//   } else {
-//     next2.classList.remove("disabled");
-//   }
-// }
+  //   //? проверка для того чтоб кнопка некст была не активной на последней странице
+  if (currentPage == pageTotalCount) {
+    next.classList.add("disabled");
+  } else {
+    next.classList.remove("disabled");
+  }
+}
 //? обработчик события для добавления(create)
 
-addForm2.addEventListener("submit", (e) => {
+addForm.addEventListener("submit", (e) => {
   //?что бы стр не перезагружалась
   e.preventDefault();
   //? проверка на заполненность полей
   if (
-    !titleInp2.value.trim() ||
-    !descriptionInp2.value.trim() ||
-    !priceInp2.value.trim() ||
-    !imageInp2.value.trim()
+    !titleInp.value.trim() ||
+    !descriptionInp.value.trim() ||
+    !priceInp.value.trim() ||
+    !imageInp.value.trim()
   ) {
     alert("заполните все поля");
     return;
   }
   //?создаем объект для добавления db.json
-  const product2 = {
-    title2: titleInp2.value,
-    description2: descriptionInp2.value,
-    price2: priceInp2.value,
-    image2: imageInp2.value,
+  const product = {
+    title: titleInp.value,
+    description: descriptionInp.value,
+    price: priceInp.value,
+    image: imageInp.value,
   };
   //?оправдяем объект в db.json
-  addProduct2(product2);
+  addProduct(product);
   //? очищаем инпуты
-  titleInp2.value = "";
-  descriptionInp2.value = "";
-  priceInp2.value = "";
-  imageInp2.value = "";
+  titleInp.value = "";
+  descriptionInp.value = "";
+  priceInp.value = "";
+  imageInp.value = "";
 });
 
 //?событие клик при удалении карточки
 document.addEventListener("click", async (e) => {
-  if (e.target.classList.contains("btn-delete-2")) {
-    deleteProduct2(e.target.id2);
+  if (e.target.classList.contains("delete-button")) {
+    deleteProduct(e.target.id);
   }
 });
 
 //? переменная что бы сохранить id продукта на который мы нажали
-let id2 = null;
+let id = null;
 //?обработчик события на открытие и заполнение модалки
 document.addEventListener("click", async (e) => {
   //? в условии пишем содержит ли такой класс
-  if (e.target.classList.contains("btn-edit-2")) {
+  if (e.target.classList.contains("btn-edit")) {
     //?сохраняем id продукта
-    id2 = e.target.id2;
+    id = e.target.id;
     //?получаем объект продукта на который мы нажали
-    const product = await getOneProduct2(e.target.id2);
+    const product = await getOneProduct(e.target.id);
     //? заполняем инпуты данными продукта getOneProduct асинхронная функция
-    editTitleInp2.value = product.title2;
-    editPriceInp2.value = product.price2;
-    editDescriptionInp2.value = product.description2;
-    editImageInp2.value = product.image2;
+    editTitleInp.value = product.title;
+    editPriceInp.value = product.price;
+    editDescriptionInp.value = product.description;
+    editImageInp.value = product.image;
   }
 });
 
 //? обработчик события на сохранение данных
-editSaveBtn2.addEventListener("click", () => {
+editSaveBtn.addEventListener("click", () => {
   //? проверка на пустоту инпутов
   if (
-    !editTitleInp2.value.trim() ||
-    !editPriceInp2.value.trim() ||
-    !editDescriptionInp2.value.trim() ||
-    !editImageInp2.value.trim()
+    !editTitleInp.value.trim() ||
+    !editPriceInp.value.trim() ||
+    !editDescriptionInp.value.trim() ||
+    !editImageInp.value.trim()
   ) {
     alert("заполните все поля ");
     //? если хотя бы один инпут пустой , выводим предупреждение  и останавливаем функцию
@@ -213,45 +211,45 @@ editSaveBtn2.addEventListener("click", () => {
   }
   //?собираем измененный объект для изменения продукта
   const editedProduct = {
-    title2: editTitleInp2.value,
-    price2: editPriceInp2.value,
-    description2: editDescriptionInp2.value,
-    image2: editImageInp2.value,
+    title: editTitleInp.value,
+    price: editPriceInp.value,
+    description: editDescriptionInp.value,
+    image: editImageInp.value,
   };
   //?вызываем функцию для изменения
-  editProduct2(id2, editedProduct);
+  editProduct(id, editedProduct);
 });
 
 // //? обработчик события чтобы перейти на определенную страницу
-// document.addEventListener("click", (e) => {
-//   if (e.target.classList.contains("page_number")) {
-//     currentPage = e.target.innerText;
-//     getProducts2();
-//   }
-// });
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("page_number")) {
+    currentPage = e.target.innerText;
+    getProducts();
+  }
+});
 
 // //? обработчик события чтобы перейти на следующую страницу
-// next2.addEventListener("click", () => {
-//   if (currentPage == pageTotalCount) {
-//     return;
-//   }
+next.addEventListener("click", () => {
+  if (currentPage == pageTotalCount) {
+    return;
+  }
 
-//   currentPage++;
-//   getProducts2();
-// });
+  currentPage++;
+  getProducts();
+});
 
 // //? обработчик события чтобы перейти на предыдущую страницу
-// prev2.addEventListener("click", () => {
-//   if (currentPage == 1) {
-//     return;
-//   }
-//   currentPage--;
-//   getProducts2();
-// });
+prev.addEventListener("click", () => {
+  if (currentPage == 1) {
+    return;
+  }
+  currentPage--;
+  getProducts();
+});
 
 // //? обработчик события для поиска
-// searchInp2.addEventListener("input", () => {
-//   searchVal = searchInp.value;
-//   currentPage = 1;
-//   getProducts2();
-// });
+searchInp.addEventListener("input", () => {
+  searchVal = searchInp.value;
+  currentPage = 1;
+  getProducts();
+});

@@ -105,14 +105,10 @@ function render(arr) {
     />
     <div class="card-body">
       <h5 class="card-title">${item.title}</h5>
-      <p class="card-text">${item.description.slice(0, 70)}...</p>
+      <p class="card-text">${item.description}</p>
       <p class="card-text">${item.price}</p>
-      <button id = "${
-        item.id
-      }" class="btn btn-secondary btn-delete ">удалить</button>
-      <button data-bs-toggle='modal' data-bs-target='#exampleModal' id = "${
-        item.id
-      }" class="btn btn-dark btn-edit">изменить</button>
+      <button id = "${item.id}" class="btn btn-secondary btn-delete ">удалить</button>
+      <button data-bs-toggle='modal' data-bs-target='#exampleModal' id = "${item.id}" class="btn btn-dark btn-edit">изменить</button>
      </div>
   </div>
         `;
