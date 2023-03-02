@@ -1,10 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
-/* body {
+body {
   font-family: var(--main-family);
   color: var(--main-color);
   background: var(--secondary-color);
-} */
+}
 
 .navbar {
+  font-family: var(--main-family);
   background-color: var(--main-color);
+}
+#main-image {
+  width: 60px;
+  height: 60px;
+}
+
+.carousel-inner {
+  height: 600px;
+}
+
+.btn-man {
+  background-color: var(--main-color);
+  color: white;
+  width: 400px;
+  height: 40px;
+  border-radius: 30px;
+}
+#btn-save-edit {
+  background-color: var(--main-color);
+  color: white;
 }
