@@ -16,15 +16,40 @@ const editDescriptionInp = document.querySelector("#edit-descr");
 const editImageInp = document.querySelector("#edit-image");
 const editSaveBtn = document.querySelector("#btn-save-edit");
 
+//? то где отображаем кнокпи для пагинации
+const paginationList = document.querySelector(".pagination-list");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+
+//? input для поиска
+const searchInp = document.querySelector("#search");
+//? переменная по которой делаем запрос
+let searchVal = "";
+
+//? максимальное количество продуктов на одной странице
+const limit = 6;
+
+//? текущая страница
+let currentPage = 1;
+
+//? маскимальное / общее количество страниц
+let pageTotalCount = 1;
+
 // ?первоначальное отображенеие данных
 getProducts();
-// ?стягиваем данные с сервера
+//? вместо изначального кода нужен этот
+//? стягиваем данные с сервера
 async function getProducts() {
-  const res = await fetch(API);
+  const res = await fetch(
+    `${API}?title_like=${searchVal}&_limit=${limit}&_page=${currentPage}`
+  );
+  const count = res.headers.get("x-total-count");
+  pageTotalCount = Math.ceil(count / limit);
   const data = await res.json();
+  //? расшифровка данных
+  //? отображаем актуальные данные
   render(data);
 }
-
 async function addProduct(product) {
   await fetch(API, {
     method: "POST",
@@ -92,6 +117,32 @@ function render(arr) {
   </div>
         `;
   });
+  //? добавляем эту функцию
+  renderPagination();
+}
+//? функция для отображения кнопок для пагинации
+function renderPagination() {
+  paginationList.innerHTML = "";
+  for (let i = 1; i <= pageTotalCount; i++) {
+    paginationList.innerHTML += `
+      <li class="page-item ${currentPage == i ? "active" : ""}">
+      <a class="page-link page_number" href="#">${i}</a>
+      </li>
+      `;
+  }
+  //? проверка для того чтоб кнопка превьюс была не активной на первой странице
+  if (currentPage == 1) {
+    prev.classList.add("disabled");
+  } else {
+    prev.classList.remove("disabled");
+  }
+
+  //? проверка для того чтоб кнопка некст была не активной на последней странице
+  if (currentPage == pageTotalCount) {
+    next.classList.add("disabled");
+  } else {
+    next.classList.remove("disabled");
+  }
 }
 
 //? обработчик события для добавления(create)
@@ -172,4 +223,38 @@ editSaveBtn.addEventListener("click", () => {
   };
   //?вызываем функцию для изменения
   editProduct(id, editedProduct);
+});
+
+//? обработчик события чтобы перейти на определенную страницу
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("page_number")) {
+    currentPage = e.target.innerText;
+    getProducts();
+  }
+});
+
+//? обработчик события чтобы перейти на следующую страницу
+next.addEventListener("click", () => {
+  if (currentPage == pageTotalCount) {
+    return;
+  }
+
+  currentPage++;
+  getProducts();
+});
+
+//? обработчик события чтобы перейти на предыдущую страницу
+prev.addEventListener("click", () => {
+  if (currentPage == 1) {
+    return;
+  }
+  currentPage--;
+  getProducts();
+});
+
+//? обработчик события для поиска
+searchInp.addEventListener("input", () => {
+  searchVal = searchInp.value;
+  currentPage = 1;
+  getProducts();
 });
