@@ -40,7 +40,7 @@ getProducts();
 //? стягиваем данные с сервера
 async function getProducts() {
   const res = await fetch(
-    `${API}?&_title=${searchVal}&_limit=${limit}&_page=${currentPage}`
+    `${API}?&title_like=${searchVal}&_limit=${limit}&_page=${currentPage}`
   );
   const count = res.headers.get("x-total-count");
   pageTotalCount = Math.ceil(count / limit);

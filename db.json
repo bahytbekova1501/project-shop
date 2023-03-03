@@ -2,68 +2,173 @@
   "productsMan": [
     {
       "id": 2,
-      "image": "https://aromacode.ru/wa-data/public/blog/images/1137/1584485756_848964.jpg",
-      "title": "Tom Ford White Suede",
-      "price": "500$",
+      "image": "https://parfumer.kg/wp-content/uploads/2020/12/Tom-Ford-Noir-de-Noir-440x320.png",
+      "title": "  TOM FORD NOIR DE NOIR EAU DE PARFUM, 50 ML",
+      "price": "400$",
       "description": "Молочный уют и мускусное благородство в одном флаконе. Согревающее и нежное тепло запаха соткано из розовых, шафрановых и сандаловых мотивов, которые дополняют ноты чабреца, олибанума, ландыша и амбры. Подчеркнет стать и достоинство хозяйки."
     },
     {
       "id": 3,
-      "image": "https://aromacode.ru/wa-data/public/blog/images/1137/1584485756_848964.jpg",
-      "title": "Tom Ford White Suede",
-      "price": "500$",
-      "description": "Молочный уют и мускусное благородство в одном флаконе. Согревающее и нежное тепло запаха соткано из розовых, шафрановых и сандаловых мотивов, которые дополняют ноты чабреца, олибанума, ландыша и амбры. Подчеркнет стать и достоинство хозяйки."
+      "image": "https://parfumer.kg/wp-content/uploads/2013/12/DG-The-One-M-EDT-100-440x340.jpg",
+      "title": "DOLCE&GABBANA THE ONE DE TOILETTE, 50 ML",
+      "price": "200$",
+      "description": "По словам создателей аромата, они преследовали цель создать “настоящий мужской аромат”, который с уверенностью можно будет назвать “классикой”, и спустя годы после выхода им должны будут пользоваться мужчины, ведь женские восторги от этого аромата будут неисчерпаемы."
     },
     {
-      "title": "cdds",
-      "description": "dcd",
-      "price": "cdscdcd",
-      "image": "cd",
+      "title": "  CHRISTIAN DIOR SAUVAGE EAU DE TOILLETTE, 60 ML",
+      "description": " Неукротимая по характеру фужерная туалетная вода была создана специально для бунтарских личностей. Верхние ноты Sauvage разносятся свежим и искрящимся бергамотом, который уступает место «сердечному» обжигающему перцу sichuan. На теле туалетная вода раскрывается базой амброксана.",
+      "price": "280$",
+      "image": "https://parfumer.kg/wp-content/uploads/2017/03/dior-sauvage-440x340.png",
+      "id": 4
+    },
+    {
+      "title": "  LACOSTE POUR HOMME EAU DE TOILETTE, 100 ML",
+      "description": "Lacoste Pour Homme Lacoste Fragrances — это аромат для мужчин, он принадлежит к группе древесные фужерные. Lacoste Pour Homme выпущен в 2002 году. ",
+      "price": "340$",
+      "image": "https://parfumer.kg/wp-content/uploads/2018/09/Lacoste-PH-440x340.png",
+      "id": 5
+    },
+    {
+      "title": "AFNAN SUPREMACY EAU DE PARFUM, 100 ML",
+      "description": "Supremacy Silver Afnan — это аромат для мужчин, он принадлежит к группе древесные цветочные мускусные. Supremacy Silver выпущен в 2013 году. Верхние ноты: Ананас, Черная смородина, Бергамот и Яблоко",
+      "price": "300$",
+      "image": "https://parfumer.kg/wp-content/uploads/2018/01/AFN-Supremacy-M-EDP-100-440x340.png",
       "id": 6
     },
     {
-      "title": "dcsdc",
-      "description": "csdcsdc",
-      "price": "dcsdsdc",
-      "image": "dscsdc",
+      "title": "GIORGIO ARMANI ARMANI CODE EAU DE TOILETTE, 30 ML",
+      "description": "Восточный аромат Armani Black Code создан для элегантного, успешного, современного мужчины понимающего истинную цену вещей и чувств. Он выделяется среди других силой своего обаяния, он живет, полной жизнью получая удовольствие от каждой минуты.",
+      "price": "450$",
+      "image": "https://parfumer.kg/wp-content/uploads/2013/11/GA-Armani-Code-M-EDT-440x340.jpg",
       "id": 7
     },
     {
-      "title": "dsfsdf",
-      "description": "cdc",
-      "price": "cdsc",
-      "image": "cdsc",
+      "title": "  TOM FORD NOIR POUR HOMME EAU DE PARFUME, 100 ML",
+      "description": "Парфюмированная вода Noir раскрывается свежими нотами бергамота и вербены, нежными зелеными нотами фиалки и терпким звучанием тмина. В сердце парфюма изысканный цветочный букет роз, ирисов и герани представлен в обрамлении из пряных нот мускатного шалфея, черного перца и мускатного ореха. ",
+      "price": "380$",
+      "image": "https://parfumer.kg/wp-content/uploads/2017/04/Tom-Ford-Noir-M-EDP-100-440x340.png",
       "id": 8
     },
     {
-      "title": "csd",
-      "description": "dcsccsdc",
-      "price": "csdc",
-      "image": "csdc",
+      "title": "VERSACE EAU DE TOILETTE, 50 ML",
+      "description": "Начальная нота открывается запахом бергамота, горькими апельсиновыми листьями и ароматной, тонизирующей лимонной цедрой .Нота “сердца” раскрывается цветочным дуэтом из благоухающей герани и дивного голубого гиацинта, а жгучий аромат мускатного ореха в паре с благородным белым кедром добавляют аромату изысканности и чувственности. ",
+      "price": "390$",
+      "image": "https://parfumer.kg/wp-content/uploads/2013/12/VERSACE-POUR-HOMME-440x340.png",
       "id": 9
     },
     {
-      "title": "dcsdccdsc",
-      "description": "csdc",
-      "price": "cdcd",
-      "image": "scd",
+      "title": "VERSACE EROS EAU DE TOILETTE, 30 ML",
+      "description": "Вдохновленный греческими мифами парфюмер Aurelien Guichard  постарался воплотить в новом мужском аромате страсть и чувственность, назвав свое творение в честь древнегреческого бога любви Эроса сына богини красоты Афродиты. Открываясь начальными нотами цитрусов, мяты и яблока, аромат наполняется сердечными нотами герани и бобов тонка. ",
+      "price": "500$",
+      "image": "https://parfumer.kg/wp-content/uploads/2017/04/eros-440x340.png",
       "id": 10
+    },
+    {
+      "title": "CAROLINA HERRERA BAD BOY EAU DE TOILETTE, 100 ML",
+      "description": "Символом аромата Bad Boy является молния. Она ассоциируется с героизмом и силой, характеризует непредсказуемых, неординарных и привлекательных мужчин. Аромат Bad Boy поражает воображение так же быстро и точно, как молния.",
+      "price": "300$",
+      "image": "https://parfumer.kg/wp-content/uploads/2020/12/Carolina-Herrera-Bad-Boy-440x340.png",
+      "id": 11
+    },
+    {
+      "title": "TRUSSARDI UOMO EAU DE TOILETTE, 100 ML",
+      "description": "В верхних нотах неспешно переплетаются освежающий лимон, дурманящий бергамот, душистый мускатный орех и терпкий гальбанум. В «сердце» создают уют нежная фиалка, гордая герань и теплый мускатный шалфей. Фундаментом композиции являются кожа, дубовый мох и несравненные пачули.",
+      "price": "480$",
+      "image": "https://parfumer.kg/wp-content/uploads/2015/02/uimi-440x340.jpg",
+      "id": 12
+    },
+    {
+      "title": "  DOLCE&GABBANA THE ONE GENTLEMAN EAU DE TOILETTE, 50 ML",
+      "description": "ромат D&G The One Gentleman стал продолжением известнейшего аромата The One for Men. Он воплотил благородство и элегантность современного джентльмена. Новый Dolce and Gabbana The One Gentleman дополнился нотами перца, кардамона, пачули и ванили.",
+      "price": "365$",
+      "image": "https://parfumer.kg/wp-content/uploads/2013/11/DG-The-One-Gentleman-EDT-50-440x340.jpg",
+      "id": 13
     }
   ],
   "productsWoman": [
     {
       "id": 1,
-      "image": "https://www.thevoicemag.ru/upload/img_cache/c30/c307fda326f6ff16dcc976780b53946f_fitted_1332x0.jpg",
-      "title": "Tom Ford White Suede",
-      "price": "500$",
-      "description": "Молочный уют и мускусное благородство в одном флаконе. Согревающее и нежное тепло запаха соткано из розовых, шафрановых и сандаловых мотивов, которые дополняют ноты чабреца, олибанума, ландыша и амбры. Подчеркнет стать и достоинство хозяйки."
+      "image": "https://parfumer.kg/wp-content/uploads/2017/03/dior-miss-dior-blooming-bouquet-eau-de-toilette-50-ml_2.png",
+      "title": "CHANEL CHANEL N5 EAU DE PARFUM, 35 ML",
+      "price": "150$",
+      "description": "Милые дамы, примите скромный дар от Christian Dior – благоухающий букет изысканных цветов, заточенный в каждой капле туалетной воды Blooming Bouquet. Парфюмерная картина написана цветочными мазками и дополнена еле слышными фруктовыми очерками."
     },
     {
       "id": 2,
-      "image": "https://www.thevoicemag.ru/upload/img_cache/c30/c307fda326f6ff16dcc976780b53946f_fitted_1332x0.jpg",
-      "title": "Tom Ford White Suede",
-      "price": "500$",
-      "description": "Молочный уют и мускусное благородство в одном флаконе. Согревающее и нежное тепло запаха соткано из розовых, шафрановых и сандаловых мотивов, которые дополняют ноты чабреца, олибанума, ландыша и амбры. Подчеркнет стать и достоинство хозяйки."
+      "image": "https://parfumer.kg/wp-content/uploads/2013/11/CHN-Chanel-No5-L-EDP-501-440x340.jpg",
+      "title": "GUERLAIN LA PETITE ROBE NOIRE EAU DE PARFUM 100 ML",
+      "price": "200$",
+      "description": "Уникальный запах, созданный ведущими итальянскими парфюмерами. Его компоненты заставят трепетать любое сердце.  Гранат, пион, лотос и магнолия, махагони и малина, юзу и мускус  – все эти экзотичные запахи заиграют драгоценными акцентами на теле женщины.  "
+    },
+    {
+      "id": 3,
+      "image": "https://parfumer.kg/wp-content/uploads/2020/12/Gucci-Memoire-Dune-Odeur-440x340.png",
+      "title": " GUCCI MEMOIRE D’UNE ODEUR EAU DE PARFUM, 60 ML",
+      "price": "350$",
+      "description": "Ароматы из унисексовой категории обладают очень интересными звучаниями, способными заворожить даже самых взыскательных гурманов, погрузив их в какую-то волшебную, граничащую с реальностью атмосферу. "
+    },
+    {
+      "title": "VERSACE BRIGHT CRYSTAL ABSOLU EAU DE PARFUM, 50 ML",
+      "description": "Примерять аккорды Versace Bright Crystal Absolu парфюмеры советуют в самом конце весны, ближе к лету. Так вы сможете подольше наслаждаться отпускным настроением, полным романтики и беззаботного веселия.",
+      "price": "230$",
+      "image": "https://parfumer.kg/wp-content/uploads/2015/12/abSOLU-440x340.png",
+      "id": 4
+    },
+    {
+      "title": "GUCCI GUCCI BAMBOO EAU DE PARFUME, 75 ML",
+      "description": "Звенящая и интригующая нота бергамота – единственное, что вы встречаете, открыв для себя Gucci Bamboo. Но этого даже более, чем достаточно, ведь она сразу дает понять прозрачный и открытый образ аромата, и создает хорошую базу для «сердечных» нот.",
+      "price": "250$",
+      "image": "https://parfumer.kg/wp-content/uploads/2015/12/GU-Gucci-Bamboo-L-EDP-50-440x340.png",
+      "id": 5
+    },
+    {
+      "title": "ELIZABETH ARDEN WHITE TEA EAU DE TOILETTE, 100 ML",
+      "description": "Начальная нота парфюмерной композиции соткана из пассажей сочного мандарина, прохладных морских нот,  мускатного шалфея и папоротника. В сердце аромата  томный ирис в обрамлении  душистого белого чая, а базовая нота  соблазнительной амбретты, согревающих бобов тонка и благородных древесных нот. ",
+      "price": "100$",
+      "image": "https://parfumer.kg/wp-content/uploads/2022/07/Elizabeth-Arden-White-Tea-440x340.png",
+      "id": 6
+    },
+    {
+      "title": "  GUCCI BLOOM EAU DE PARFUM, 30 ML",
+      "description": "Благоухание Gucci Bloom — это воплощение женственности. Это — сама женская природа, с ее озорством и кокетством, стремлением к гармонии и красоте и вечной мечтой о романтике.Gucci Bloom — ваш любимый цветок!",
+      "price": "300$",
+      "image": "https://parfumer.kg/wp-content/uploads/2020/12/Gucci-Bloom-440x340.png",
+      "id": 7
+    },
+    {
+      "title": "DOLCE & GABBANA DOLCE SHINE EAU DE PARFUME, 50 ML",
+      "description": "Парфюмированная вода Dolce Shine от итальянского бренда Dolce&Gabbana – яркий всплеск положительных эмоций, радости и умиротворения, обрамленный амплитудой фруктово-цветочных нот.",
+      "price": "300$",
+      "image": "https://parfumer.kg/wp-content/uploads/2022/07/Dolce-Gabbana-Dolce-Shine-440x340.png",
+      "id": 8
+    },
+    {
+      "title": "VERSACE EROS POUR FEMME EAU DE PFRFUME, 100 ML",
+      "description": "Изысканный Eros Pour Femme начинает игру обольщения лимонными, гранатовыми и бергамотными нотками. Продолжается манящий эффект благодаря искусному сочетанию цветка лимона с жасмином и пионом. ",
+      "price": "210$",
+      "image": "https://parfumer.kg/wp-content/uploads/2015/12/VS-Eros-Pour-Femme-EDP-100-440x340.png",
+      "id": 9
+    },
+    {
+      "title": "MAISON FRANCIS KURKDJIAN BACCARAT ROUGE 540 EAU DE PARFUME, 200 ML",
+      "description": "Ароматы дополняют и облагораживают друг друга, стремительно набирают силу и в заключение дарят торжественный аккорд, в котором отчетливо слышатся звуки белого кедра и еловой смолы. ",
+      "price": "340$",
+      "image": "https://parfumer.kg/wp-content/uploads/2022/11/Maison-Francis-Kurkdjian-edp-bacarrat-rouge-440x340.png",
+      "id": 10
+    },
+    {
+      "title": "BYREDO LA TULIPE EAU DE PERFUME, 50 ML",
+      "description": "Такое благоухание прекрасно подойдет девушкам, которые умеют преподносить свою женственность, чувствительность и уникальность на сознательном уровне.  ",
+      "price": "250$",
+      "image": "https://parfumer.kg/wp-content/uploads/2022/07/Byredo-La-Tulipe-440x340.png",
+      "id": 11
+    },
+    {
+      "title": "GIORGIO ARMANI SI EAU DE PARFUM, 100 ML",
+      "description": "Открывается Giorgio Armani Si приятным, чуточку терпким ароматом нектара черной смородины, а удивительная синтетическое вещество амброксан, что максимально приближено к природной амбре, придает аромату неожиданные и такие привлекательные для противоположного пола нотки, одновременно обеспечивая неимоверную стойкость",
+      "price": "310$",
+      "image": "https://parfumer.kg/wp-content/uploads/2013/12/ar1-440x340.jpg",
+      "id": 12
     }
   ]
 }
